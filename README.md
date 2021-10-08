@@ -1,2 +1,2 @@
 # POOII
-Priyecto POOII
+Proyecto POOII
