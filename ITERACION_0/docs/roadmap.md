@@ -16,3 +16,6 @@
 | HU-10 | Titulo |   Alta    |       11        | Como empresa quiero crear un perfil con datos basicos.                                |
 | HU-11 | Titulo |   Alta    |        8        | Como empresa quiero ver mi perfil con los datos correspondietes.                      |
 | HU-12 | Titulo |   Alta    |        8        | Como empresa deseo ver los perfiles de los usuarios que postularon al anuncio.        |
+
+
+
