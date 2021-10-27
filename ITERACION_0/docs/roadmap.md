@@ -4,7 +4,7 @@
 
 | ID    | Título | Prioridad | Tiempo estimado | Historia de usuario                                                                   |
 | :---- | ------ | :-------: | :-------------: | ------------------------------------------------------------------------------------- |
-| HU-1  | Titulo |   baja    |        5        | Como usuario quiero cargar el cv para poder adjuntarlo en la publicación.             |
+| HU-1  | Titulo |   baja    |        5        | Como usuario quiero cargar mis datos de perfil para complementar la postulación.      |
 | HU-2  | Titulo |   alta    |       10        | Como usuario quiero ver ingresar mis datos basicos en mi perfil.                      |
 | HU-3  | Titulo |   meida   |        8        | Como usuario quiero ver mis datos en mi perfil para validarlos                        |
 | HU-4  | Titulo |   Alta    |        8        | Como usuario quiero ver las publicaciones de la bolsa de trabajo.                     |
