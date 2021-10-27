@@ -1,0 +1,15 @@
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/App.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/repositorio/RevisionesRepositorio.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/repositorio/RepositorioExcepcion.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/modelo/Curso.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/repositorio/Sql2oCursosRepositorio.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/modelo/Revision.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/controladores/RevisionesControlador.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/repositorio/Sql2oRevisionesRepositorio.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/paginas/ModeloIndex.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/controladores/CursosControlador.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/paginas/ModeloCursos.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/paginas/ModeloRevision.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/paginas/ModeloRevisiones.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/repositorio/CursosRepositorio.java
+/home/cbiale/Escritorio/UNaM/POO2/proyectos/proyecto/src/main/java/edu/unam/jte/paginas/ModeloCurso.java
