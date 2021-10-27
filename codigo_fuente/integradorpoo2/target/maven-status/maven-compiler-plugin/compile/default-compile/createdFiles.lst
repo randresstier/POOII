@@ -1,0 +1,8 @@
+com/tulabor/tulabor/modelo/IDataService.class
+com/tulabor/tulabor/repositorio/CategoriaRepositorio.class
+com/tulabor/tulabor/paginas/ModeloIndex.class
+com/tulabor/tulabor/modelo/Categoria.class
+com/tulabor/tulabor/modelo/DataService.class
+com/tulabor/tulabor/paginas/ModeloCategoria.class
+com/tulabor/tulabor/App.class
+com/tulabor/tulabor/controladores/CategoriaControlador.class
