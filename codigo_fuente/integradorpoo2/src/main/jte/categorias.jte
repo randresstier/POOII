@@ -3,7 +3,6 @@
 @tag.header()
 
     <h2> Categorias </h2>
-    <a href="/" type="button" class="btn btn-secondary"> Volver </a>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
             <thead>
@@ -23,7 +22,6 @@
                         <td>${categoria.getNombre()}</td>
                         <td class="col-1"> <a type="button" class="btn btn-info no-gutters" href="categorias/${categoria.getId()}"> Editar </a></td>                            
                         <td class="col-1"> <button type="button" class="btn btn-danger no-gutters" onClick="borrar(${categoria.getId()})"> Eliminar </button></td>
-                        <td class="col-1"> <a href="/categorias/${categoria.getId()}/revisiones" type="button" class="btn btn-secondary"> Revisiones </a> </td>
                     </tr>
                 @endfor
             </tbody>

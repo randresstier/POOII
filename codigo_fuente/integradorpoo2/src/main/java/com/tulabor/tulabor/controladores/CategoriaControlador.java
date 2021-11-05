@@ -1,6 +1,7 @@
 package com.tulabor.tulabor.controladores;
 
 import com.tulabor.tulabor.modelo.Categoria;
+import com.tulabor.tulabor.modelo.DataService;
 import com.tulabor.tulabor.paginas.ModeloCategorias;
 import io.javalin.http.Context;
 import java.sql.SQLException;
@@ -14,22 +15,18 @@ import edu.unam.jte.repositorio.RepositorioExcepcion;
 import io.javalin.http.Context;
 */
 import com.tulabor.tulabor.repositorio.CategoriaRepositorio;
-import java.util.List;
 
 public class CategoriaControlador {
-    /*
-    private final CursosRepositorio cursosRepositorio;
+    
+    private final CategoriaRepositorio categoriaRepositorio;
 
-    public CategoriaControlador(CursosRepositorio cursosRepositorio) {
-        this.cursosRepositorio = cursosRepositorio;
-    */
+    public CategoriaControlador(DataService dao) {
+        this.categoriaRepositorio  = new CategoriaRepositorio(dao);
+    }
 
     public void listar(Context ctx) throws SQLException {
         var modelo = new ModeloCategorias();
-        var c = new CategoriaRepositorio();
-        modelo.categorias=c.listar();
-        System.out.println("MODELO");
-        System.out.println(modelo.categorias);
+        modelo.categorias=this.categoriaRepositorio.listar();
         ctx.render("categorias.jte", Collections.singletonMap("modelo", modelo));        
     }
 
@@ -40,9 +37,8 @@ public class CategoriaControlador {
         
         var categoria = new Categoria(ctx.formParam("nombre"));
         System.out.println(categoria);
-        CategoriaRepositorio c = new CategoriaRepositorio();
-        c.crear(categoria);
-        ctx.redirect("/categorias");        
+        this.categoriaRepositorio.crear(categoria);
+        ctx.redirect("/admin/categorias");        
     }
 /*
     public void borrar(Context ctx) throws SQLException, RepositorioExcepcion {

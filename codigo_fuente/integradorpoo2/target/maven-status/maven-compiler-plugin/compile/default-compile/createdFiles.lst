@@ -1,7 +1,11 @@
+com/tulabor/tulabor/repositorio/EmpresaRepositorio.class
+com/tulabor/tulabor/controladores/EmpresaControlador.class
 com/tulabor/tulabor/modelo/IDataService.class
 com/tulabor/tulabor/repositorio/CategoriaRepositorio.class
+com/tulabor/tulabor/paginas/ModeloCategorias.class
 com/tulabor/tulabor/paginas/ModeloIndex.class
 com/tulabor/tulabor/modelo/Categoria.class
+com/tulabor/tulabor/modelo/Empresa.class
 com/tulabor/tulabor/modelo/DataService.class
 com/tulabor/tulabor/paginas/ModeloCategoria.class
 com/tulabor/tulabor/App.class

@@ -3,7 +3,7 @@
 @tag.header()
 
 <h2> Crear Categoría </h2>
-<form action="/guardar-categoria" method="post">
+<form action="/admin/guardar-categoria" method="post">
     <div class="form-group row">
         <label for="nombre" class="col-sm-2 col-form-label"> Nombre Categoría </label>
         <div class="col-sm-8">

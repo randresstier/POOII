@@ -10,3 +10,5 @@ services:
       - POSTGRES_USER=dbuser
       - POSTGRES_PASSWORD=admin2021
       - POSTGRES_DB=todoapp
+  restart_policy:
+        condition: always

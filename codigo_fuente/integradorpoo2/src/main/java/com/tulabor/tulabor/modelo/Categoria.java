@@ -88,7 +88,9 @@ public class Categoria implements Serializable {
 
     @Override
     public String toString() {
-        return idCategoria+"/"+nombre;
+        return "Categoria{" + "idCategoria=" + idCategoria + ", nombre=" + nombre + ", estado=" + estado + '}';
     }
+
+
     
 }

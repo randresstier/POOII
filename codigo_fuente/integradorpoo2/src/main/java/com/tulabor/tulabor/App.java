@@ -26,6 +26,8 @@ import com.tulabor.tulabor.modelo.Categoria;
 import com.tulabor.tulabor.paginas.ModeloIndex;
 import io.javalin.http.staticfiles.Location;
 import com.tulabor.tulabor.controladores.CategoriaControlador;
+import com.tulabor.tulabor.controladores.EmpresaControlador;
+import com.tulabor.tulabor.controladores.PublicacionControlador;
 
 public class App {
     
@@ -34,28 +36,43 @@ public class App {
      * @param args argumento que recibe la aplicación
      */
     public static void main(String[] args) {
-        // conexión usando sql2o
-        // para crear un superusuario en postgres
-        // sudo -u postgres createuser -s $(whoami);
-        // dentro de postgres (ej: psql): alter user USUARIO password 'XXXX';
-        //var sql2o = new Sql2o("jdbc:postgresql://localhost:5432/revisiones", "cbiale", "cbiale");
+        //inicio servicio de datos
+        DataService service = new DataService(); 
 
-        
         // creo servidor
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/public", Location.CLASSPATH);
-        }).exception(Exception.class, (e, ctx) -> { ctx.status(404); }) 
-        .start(7000);
+        }).exception(Exception.class, (e, ctx) -> { 
+            ctx.status(404);
+            ctx.result(e.toString());
         
-        var CategoriaControlador = new CategoriaControlador();
+        }).start(7000);
+        
+        
+        var CategoriaControlador = new CategoriaControlador(service);
+        var EmpresaControlador = new EmpresaControlador(service);
+        var PublicacionControlador = new PublicacionControlador(service);
         // defino rutas
         app.get("/", App::mostrarIndex); // muestra el index
-        app.get("/nueva-categoria", CategoriaControlador::nuevo); // muestra el index
-        app.get("/categorias", CategoriaControlador::listar); // muestra el index
+        app.get("/publicaciones",PublicacionControlador::listar);
 
-        app.post("/guardar-categoria", CategoriaControlador::crear); // muestra el index
+        
+        //admin
+        app.get("/admin/nueva-categoria", CategoriaControlador::nuevo); // muestra el index
+        app.get("/admin/categorias", CategoriaControlador::listar); // muestra el index
+        app.post("/admin/guardar-categoria", CategoriaControlador::crear); // muestra el index
+        app.get("/admin/empresas", EmpresaControlador::listar); // muestra el index
 
+        
+        //user empresa
+        app.get("/empresa/registro", EmpresaControlador::nuevo); // muestra el index
+        app.post("/empresa/guardar-empresa", EmpresaControlador::crear); // muestra el index
+        app.get("/empresa/crear-publicacion",PublicacionControlador::nuevo); 
+        app.post("/empresa/guardar-publicacion",PublicacionControlador::crear);
 
+        //app.post("/empresa/perfil", EmpresaControlador::listar); // muestra el index
+
+        
     } 
     /** 
      * @param ctx Contexto de la petición
@@ -63,12 +80,6 @@ public class App {
     private static void mostrarIndex(Context ctx) {
         System.out.println("index");
         var modelo = new ModeloIndex();
-        /*        // controlo por cookie
-        if (ctx.cookie("nombreUsuario") != null) {
-        modelo.nombreUsuario = ctx.cookie("nombreUsuario");
-        } else {
-        modelo.nombreUsuario = "";
-        }*/
         ctx.render("index.jte", Collections.singletonMap("modelo", modelo));
     }
     

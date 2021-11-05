@@ -16,18 +16,34 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/nueva-categoria">Crear Categoria</a>
+              <a class="nav-link active" aria-current="page" href="/admin/nueva-categoria">Crear Categoria</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/crear-anuncio">Crear Anuncio</a>
+              <a class="nav-link active" aria-current="page" href="/empresa/crear-publicacion">Crear Publicación</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/categorias">Categorias</a>
+              <a class="nav-link active" aria-current="page" href="/admin/categorias">Categorias</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/empresa/registro">Como Empresa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/registro-empresa">Empresa</a>
+              <a class="nav-link active" aria-current="page" href="/registro">Registro</a>
             </li>
+            -->
           </ul>
         </div>
+      
+
+    <div class="col-md-6 text-end">
+        <ul class="nav">
+            <li class="nav-item"><a href="/login" class="nav-link link-dark px-2">Login</a></li>
+            <li class="nav-item"><a href="/registro" class="nav-link link-dark px-2">Registro</a></li>
+            <li class="nav-item"><a href="/empresa/registro" class="nav-link link-dark px-2">Registro Empresa</a></li>
+
+        </ul>
+    </div>
+
+
       </div>
     </nav>

@@ -7,6 +7,7 @@ package com.tulabor.tulabor.repositorio;
 
 import com.tulabor.tulabor.modelo.Categoria;
 import com.tulabor.tulabor.modelo.DataService;
+import com.tulabor.tulabor.modelo.Empresa;
 import com.tulabor.tulabor.modelo.IDataService;
 import java.util.List;
 
@@ -14,31 +15,30 @@ import java.util.List;
  *
  * @author richard
  */
-public class CategoriaRepositorio {
+public class EmpresaRepositorio {
         
     private final IDataService dao;
     
-    public CategoriaRepositorio(DataService dao) {
+    public EmpresaRepositorio(DataService dao) {
         this.dao=dao;
     }
       
-    public void crear(Categoria categoria) {
+    public void crear(Empresa empresa) {
 
-        this.dao.iniciarTransaccion();
-        this.dao.insertar(categoria);
-        this.dao.confirmarTransaccion();
+        dao.iniciarTransaccion();
+        dao.insertar(empresa);
+        dao.confirmarTransaccion();
+        
     }
     
-    public List<Categoria> listar() {
-        var object = this.dao.buscarTodos(Categoria.class);
-        System.out.println("CATEGORIAS");
-        System.out.println(object);
+    public List<Empresa> listar() {
+        var object = dao.buscarTodos(Empresa.class);
         return object;
     }
     
-    public Categoria getCategoria(long categoria) {
-        var object = this.dao.buscar(Categoria.class, categoria);
-        System.out.println("CATEGORIA");
+     public Empresa getEmpresa(long empresa) {
+        var object = this.dao.buscar(Empresa.class, empresa);
+        System.out.println("Empresa");
         System.out.println(object);
         return object;
     }
