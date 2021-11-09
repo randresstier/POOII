@@ -4,6 +4,7 @@
  
 ## Diseño OO 
 #### Diagrama de Clases
+
 ![diagrama](diagrama_clase.png)
 
 ## Wireframe y caso de uso 
@@ -19,11 +20,15 @@
 - Se muestra al usuario el formulario para la creacion.
 - Se crea el usuario persona.
   
+![diagrama](pantalla_registro_usuario.png)
+  
 #### Caso de uso: Crear datos para perfil laboral
 - El usuario persona selecciona agregar datos al perfil laboral.
 - Se muestra al usuario el formulario para la creacion.
 - El usuario agrega los datos adicionales del perfil.
-  
+
+![diagrama](pantalla_datos_adicionales_usuario.png)
+
 ## Backlog de iteraciones 
 
 | ID    | Historia de usuario                                                                   |
@@ -42,6 +47,6 @@
 - Configurar la Base de datos para poder persistir la información.
 
 
-## Retrospectiva
+## **Retrospectiva**
 
  Hasta el momento de este release, se logró avanzar con dos historias de usuario basicas, se está analizando la posibilidad de incluir mas datos en la creacion de estos componentes.
