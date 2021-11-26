@@ -22,8 +22,8 @@ import java.util.Collections;
  * @author richard
  */
 public class EmpresaControlador {
-     private final EmpresaRepositorio empresaRepositorio;
-     private final CategoriaRepositorio  categoriaRepositorio;
+    private final EmpresaRepositorio empresaRepositorio;
+    private final CategoriaRepositorio  categoriaRepositorio;
 
     public EmpresaControlador(DataService dao) {
         this.empresaRepositorio  = new EmpresaRepositorio(dao);

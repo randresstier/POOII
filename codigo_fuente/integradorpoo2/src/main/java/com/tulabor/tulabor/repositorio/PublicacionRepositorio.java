@@ -35,4 +35,10 @@ public class PublicacionRepositorio {
         var object = dao.buscarTodos(Publicacion.class);
         return object;
     }
+    public Publicacion getPublicacion(long publicacion) {
+        var object = this.dao.buscar(Publicacion.class, publicacion);
+        System.out.println("publicacion");
+        System.out.println(object);
+        return object;
+    }
 }

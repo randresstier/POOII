@@ -9,6 +9,7 @@ import com.tulabor.tulabor.modelo.DataService;
 import com.tulabor.tulabor.modelo.Publicacion;
 import com.tulabor.tulabor.paginas.ModeloCategorias;
 import com.tulabor.tulabor.paginas.ModeloEmpresas;
+import com.tulabor.tulabor.paginas.ModeloPublicacion;
 import com.tulabor.tulabor.paginas.ModeloPublicaciones;
 import com.tulabor.tulabor.repositorio.CategoriaRepositorio;
 import com.tulabor.tulabor.repositorio.EmpresaRepositorio;
@@ -71,6 +72,15 @@ public class PublicacionControlador {
         //this.empresaRepositorio.listar();
         ctx.redirect("/publicaciones");        
     }
+    
+    public void buscar(Context ctx) throws SQLException {
+        var modelo = new ModeloPublicacion();
+        
+        var id = ctx.pathParamAsClass("id", Long.class).get();
+        modelo.publicacion=this.publicacionRepositorio.getPublicacion(id);
+        ctx.render("publicacion.jte", Collections.singletonMap("modelo", modelo));        
+    }
+
 }
 
 

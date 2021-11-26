@@ -28,6 +28,7 @@ import io.javalin.http.staticfiles.Location;
 import com.tulabor.tulabor.controladores.CategoriaControlador;
 import com.tulabor.tulabor.controladores.EmpresaControlador;
 import com.tulabor.tulabor.controladores.PublicacionControlador;
+import com.tulabor.tulabor.controladores.PersonaControlador;
 
 public class App {
     
@@ -52,9 +53,14 @@ public class App {
         var CategoriaControlador = new CategoriaControlador(service);
         var EmpresaControlador = new EmpresaControlador(service);
         var PublicacionControlador = new PublicacionControlador(service);
+        var PersonaControlador = new PersonaControlador(service);
+        
         // defino rutas
         app.get("/", App::mostrarIndex); // muestra el index
         app.get("/publicaciones",PublicacionControlador::listar);
+        app.get("/publicaciones/{id}",PublicacionControlador::buscar);
+        app.get("/registro",PersonaControlador::nuevo);
+        app.post("/guardar-usuario",PersonaControlador::crear);
 
         
         //admin

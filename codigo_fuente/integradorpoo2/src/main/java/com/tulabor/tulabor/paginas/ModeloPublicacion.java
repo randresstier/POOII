@@ -7,6 +7,7 @@ package com.tulabor.tulabor.paginas;
 
 import com.tulabor.tulabor.modelo.Categoria;
 import com.tulabor.tulabor.modelo.Empresa;
+import com.tulabor.tulabor.modelo.Publicacion;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,5 +18,6 @@ import java.util.List;
 public class ModeloPublicacion {
     public List<Empresa> empresas = new ArrayList<>();
     public List<Categoria> categorias = new ArrayList<>();
+    public Publicacion publicacion = new Publicacion();
 
 }
